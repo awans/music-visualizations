@@ -1,0 +1,4 @@
+So far:
+- brew install graphviz
+- easy_install pyechonest
+- easy_install pygraphviz
