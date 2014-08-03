@@ -7,6 +7,8 @@ from time import sleep
 
 config.ECHO_NEST_API_KEY = "Y3C5I9DKM9SQFZOLF"
 
+filename = "holyother"
+seed_artist_name = "Holy Other"
 
 g = AGraph(strict=True, directed=True)
 
@@ -35,9 +37,7 @@ def map_artist(a, depth=2):
     recursively_add_nodes(a, depth=depth)
     recursively_add_edges(a, depth=depth)
     
-a = artist.Artist('Boards of Canada')
+a = artist.Artist(seed_artist_name)
 map_artist(a, depth=1)
 
-g.layout(prog='dot')
-g.draw('out.png')
-g.write("out.dot")
+g.write("%s.dot" % filename)
