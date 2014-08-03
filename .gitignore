@@ -1,2 +1,6 @@
 *.dot
 *.png
+*.gephi
+*.svg
+web/
+.DS_Store
